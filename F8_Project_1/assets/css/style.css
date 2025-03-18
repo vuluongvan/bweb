@@ -260,6 +260,7 @@ nav .action-link:hover {
     margin-top: 41px;
     padding-top: 110px;
     background: #F5FAFE;
+    padding-bottom: 110px;
 }
 
 .featured .sub-title {
