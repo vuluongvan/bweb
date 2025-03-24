@@ -10,6 +10,11 @@ html {
     font-size: 62.5%;
 }
 
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 body {
     font-size: 1.6rem;
     font-family: "Poppins", sans-serif;
@@ -46,16 +51,30 @@ a {
 }
 
 /* =========== header ============ */
-.header {
+
+.fixed-header {
+    background-color: #E6F0FF;
+    padding-top: 26px;
+    position: sticky;
+    top: -26px;
+    z-index: 1;
+}
+
+.hero-wrap {
+    justify-content: center;
     position: relative;
+    display: flex;
+    flex-direction: column;
     background-color: #e6f0ff;
-    height: 100vh;
+    height: calc(100vh - 90px);
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    padding-top: 38px;
+    padding: 12px 0;
+    background-color: #e6f0ff;
+
 }
 
 .navbar ul {
@@ -97,15 +116,13 @@ nav .action-link:hover {
     border-radius: 8px;
 }
 
-.hero {
-    margin-top: 130px;
-}
 
-.hero .info {
+
+.info {
     width: 50.4%;
 }
 
-.hero .sub-title {
+.sub-title {
     font-weight: 500;
     font-size: 1.8rem;
     line-height: 1.5;
@@ -113,7 +130,7 @@ nav .action-link:hover {
     color: #687690;
 }
 
-.hero .title {
+.title {
     margin-top: 8px;
     color: #000336;
     font-size: 6.4rem;
@@ -121,7 +138,7 @@ nav .action-link:hover {
     line-height: 1.19;
 }
 
-.hero .desc {
+.desc {
     margin-top: 30px;
     font-weight: 400;
     line-height: 1.78;
@@ -279,11 +296,13 @@ nav .action-link:hover {
     padding-bottom: 110px;
 }
 
+
 .featured .sub-title {
     color: #000339;
     font-size: 3.5rem;
     font-weight: 600;
     line-height: 1;
+
 }
 
 .featured .row {
@@ -375,6 +394,7 @@ nav .action-link:hover {
     font-size: 1.4rem;
     font-weight: 500;
     line-height: 1;
+    white-space: nowrap;
 }
 
 .featured .item .icon {
@@ -408,16 +428,18 @@ nav .action-link:hover {
 .stats .img-block {
     position: relative;
     display: flex;
+
 }
 
 .stats-trend {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -25%;
     width: 239px;
     padding: 45px 22px 40px;
     border-radius: 0px 0px 12px 12px;
     background-color: #FFFFFF;
+
 }
 
 .stats-trend .separate {
@@ -482,11 +504,11 @@ nav .action-link:hover {
 
 .stats .sub-title {
     position: relative;
-    width: 269px;
+    width: 272px;
     font-weight: 600;
     font-size: 3.5rem;
     line-height: 1.29;
-    color: #000339
+    color: #000339;
 }
 
 .stats .sub-title::before {
